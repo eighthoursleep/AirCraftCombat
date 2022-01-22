@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 662023601
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: planeprefabs
+      Dependencies: {}

@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 3155990437
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 660c20088884025241cc3d11770a6385
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fa7a07e2b40b939809835e91383523b2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 88ef3bf5bd188d04a9dd9f0feb937108, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Fighter.prefab
+Dependencies: []
