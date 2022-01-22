@@ -14,7 +14,7 @@ namespace AC
         private float shakeValue = .5f;
         private Vector3 localPosOrigin = new Vector3(0.0f,3.67f,-13.8f);
 
-        private void Awake()
+        private void Start()
         {
             if (followTarget == null)
             {
@@ -22,9 +22,9 @@ namespace AC
             }
         }
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
-            if (InputMgr.Instance.Input_F)
+            if (InputMgr.Instance.InputF)
             {
                 ShakeTime = 0.5f;
             }

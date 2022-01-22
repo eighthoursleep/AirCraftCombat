@@ -20,8 +20,7 @@ namespace AC
         public float PITCH_MAX = 10.0f;
         public float YAW_MAX = 10.0f;
         public float ROLL_MAX = 10.0f;
-
-        private Vector3 moveDir = new Vector3();
+        
         private Vector3 startPos = new Vector3();
         private void Awake()
         {
@@ -42,11 +41,17 @@ namespace AC
             startPos.Set(transform.position.x, transform.position.y, transform.position.z);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            UpdateMoveRot(Time.fixedDeltaTime);
-            UpdateRotaion(Time.fixedDeltaTime);
-            UpdatePosition(Time.fixedDeltaTime);
+            UpdateMoveRot(Time.deltaTime);
+            UpdateRotaion(Time.deltaTime);
+            UpdatePosition(Time.deltaTime);
+            if (InputMgr.Instance.InputR)
+            {
+                Debug.Log("is R");
+                transform.position.Set(startPos.x, startPos.y, startPos.z);
+                transform.position = transform.position;
+            }
         }
 
         private void UpdateMoveRot(float deltaTime)
@@ -58,19 +63,6 @@ namespace AC
                 transform.RotateAround(transform.position,transform.up, yaw * rotSpeed * deltaTime);
                 transform.RotateAround(transform.position,-transform.right, pitch * rotSpeed * deltaTime);
             }
-        }
-        /// <summary>
-        /// 改变前进方向，原理是直接在前进方向上叠加输入，效果很怪，不像真实飞机转向。
-        /// </summary>
-        private void UpdateMoveDir()
-        {
-            moveDir = transform.forward;
-            float horizontal = rotSpeed * InputMgr.Instance.Horizontal;
-            float vertical = rotSpeed * InputMgr.Instance.Vertical;
-            Vector3 dir = Vector3.zero;
-            dir.x = horizontal;
-            dir.y = vertical;
-            moveDir += dir;
         }
         /// <summary>
         /// 改变模型转向
@@ -92,17 +84,8 @@ namespace AC
         private void UpdatePosition(float deltaTime)
         {
             Vector3 translation = transform.forward * velocity * deltaTime;
-            transform.Translate(translation,Space.World);
-        }
-
-        private void Update()
-        {
-            if (InputMgr.Instance.Input_R)
-            {
-                Debug.Log("is R");
-                transform.position.Set(startPos.x, startPos.y, startPos.z);
-                transform.position = transform.position;
-            }
+            //transform.Translate(translation,Space.World);
+            transform.position += translation;
         }
     }
 }

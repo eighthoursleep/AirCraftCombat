@@ -5,3 +5,15 @@
 /.idea
 /Assets/AceArcadeMissiles
 /obj
+/Assets/StreamingAssets.meta
+/Assets/StreamingAssets/StreamingAssets
+/Assets/StreamingAssets/StreamingAssets.manifest
+/Assets/StreamingAssets/StreamingAssets.manifest.meta
+/Assets/StreamingAssets/StreamingAssets.meta
+/Assets/StreamingAssets/planeprefabs
+/Assets/StreamingAssets/planeprefabs.manifest
+/Assets/StreamingAssets/planeprefabs.manifest.meta
+/Assets/StreamingAssets/planeprefabs.meta
+/Assets/Scripts/Editor.meta
+/Assets/Scripts/Editor/AssetBundleBuider.cs
+/Assets/Scripts/Editor/AssetBundleBuider.cs.meta

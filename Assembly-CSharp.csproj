@@ -77,8 +77,9 @@
     <Compile Include="Assets\Scripts\InfoPanel.cs" />
     <Compile Include="Assets\Scripts\InputMgr.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
-    <Compile Include="Assets\Scripts\ResMgr.cs" />
-    <Compile Include="Assets\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Utils\GameFlag.cs" />
+    <Compile Include="Assets\Scripts\Utils\ResMgr.cs" />
+    <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
     <None Include="Assets\AceArcadeMissiles\Documentation\Changelog.txt" />
     <None Include="Assets\AceArcadeMissiles\Documentation\AudioLicenses.txt" />
     <None Include="Assets\AceArcadeMissiles\Documentation\License.txt" />
